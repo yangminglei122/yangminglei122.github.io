@@ -1,0 +1,325 @@
+/* ============================================================
+   页面基础样式 —— 参考经典学术个人主页风格
+   布局：930px 居中，左侧 160px 照片导航栏 + 右侧内容区
+   ============================================================ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+}
+
+/* ---------- 布局表格 ---------- */
+table.pagelayout {
+	width: 930px;
+	border: 0;
+	border-collapse: collapse;
+}
+
+table.sidetable {
+	width: 160px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+table.headertable {
+	width: 730px;
+	border-collapse: collapse;
+}
+
+table.ruletable {
+	width: 750px;
+	border-collapse: collapse;
+}
+
+table.contenttable {
+	width: 680px;
+	border-collapse: collapse;
+}
+
+table.foottable {
+	width: 930px;
+	border-collapse: collapse;
+}
+
+/* ---------- 页眉（内容区顶部） ---------- */
+.pageheader {
+	height: 62px;
+	padding: 22px 8px 10px 8px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.sitename {
+	color: #03188D;
+	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.sitename-en {
+	color: #03188D;
+	font-family: "Times New Roman", "宋体", serif;
+	font-size: 20px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/* ---------- 左侧导航 ---------- */
+.menu {
+	color: #000099;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 20px;
+	display: block;
+}
+
+.menu:hover {
+	color: #FF6600;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.menu-current {
+	color: #FF6600;
+}
+
+.foot {
+	color: #909090;
+	font-family: "Times New Roman", "宋体";
+	font-size: 12px;
+}
+
+.footlink {
+	color: #909090;
+	font-family: "Times New Roman", "宋体";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footlink:hover {
+	color: #8142bf;
+	font-family: "Times New Roman", "宋体";
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.notation {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* ---------- 正文标题 ---------- */
+.titlebig {
+	color: #000099;
+	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 14px 0 6px 0;
+}
+
+.titlesmall {
+	color: #006600;
+	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 12px 0 4px 0;
+}
+
+/* ---------- 正文文字 ---------- */
+.text {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+	text-align: justify;
+	line-height: 1.7;
+}
+
+.textlink {
+	color: #000099;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.textlink:hover {
+	color: #8142bf;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.article {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+	text-align: justify;
+}
+
+.articletitle {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.articlelink {
+	color: #0077EE;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.articlelink:hover {
+	color: #8142bf;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+}
+
+/* ---------- 内容区补充样式 ---------- */
+.text p {
+	margin: 8px 0;
+}
+
+/* 无序列表（经历要点） */
+ul.cv {
+	margin: 6px 0 10px 0;
+	padding-left: 22px;
+}
+
+ul.cv li {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-align: justify;
+	line-height: 1.7;
+	margin: 5px 0;
+}
+
+/* 有序列表（论文/专利） */
+ol.pub {
+	margin: 6px 0 10px 0;
+	padding-left: 26px;
+}
+
+ol.pub li {
+	color: #000000;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-align: justify;
+	line-height: 1.7;
+	margin: 7px 0;
+}
+
+/* 经历/项目条目标题行 */
+.itemhead {
+	color: #000000;
+	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 14px 0 4px 0;
+}
+
+.itemhead .org {
+	color: #000099;
+}
+
+.itemsub {
+	color: #505050;
+	font-family: "Times New Roman", "宋体";
+	font-size: 13px;
+	padding: 2px 0 4px 0;
+}
+
+/* 信息表格（教育背景 / 荣誉奖励 / 联系方式） */
+table.cvtable {
+	border-collapse: collapse;
+	margin: 8px 0;
+	width: 100%;
+}
+
+table.cvtable th,
+table.cvtable td {
+	border: 1px solid #A7B1FC;
+	padding: 6px 10px;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	color: #000000;
+	text-align: left;
+	vertical-align: top;
+	line-height: 1.7;
+}
+
+table.cvtable th {
+	background: #EEF0FF;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/* 成果展示图片 */
+.achfigure {
+	margin: 14px 0 20px 0;
+}
+
+.achfigure img {
+	max-width: 640px;
+	width: 100%;
+	height: auto;
+	border: 1px solid #C8C8C8;
+	display: block;
+}
+
+.achfigure .caption {
+	color: #404040;
+	font-family: "Times New Roman", "宋体";
+	font-size: 13px;
+	padding: 6px 2px 0 2px;
+	text-align: center;
+}
+
+.videolink {
+	color: #0077EE;
+	font-family: "Times New Roman", "宋体";
+	font-size: 14px;
+	text-decoration: none;
+	word-break: break-all;
+}
+
+.videolink:hover {
+	color: #8142bf;
+}
+
+/* ---------- 小屏适配（窄屏时收窄布局） ---------- */
+@media (max-width: 960px) {
+	table.pagelayout,
+	table.foottable {
+		width: 100%;
+		max-width: 930px;
+	}
+	table.headertable,
+	table.ruletable,
+	table.contenttable {
+		width: 100%;
+	}
+	.pageheader {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
+}
