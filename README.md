@@ -57,7 +57,7 @@ site\                        # 本目录
 
 注意：
 
-- **不自动同步**的部分：教育背景、联系方式、头像、菜单——这些内容极少变化；如果 `cv_changes.txt` 里出现这些区域的变更，手动改对应 `data\*.ps1` 后双击 `site\build.cmd`，或找 AI 处理；
+- **不自动同步**的部分：教育背景、联系方式（**「个人博客」行除外**——按 Word 表头地址自动生成，写几个显示几行）、头像、菜单——这些内容极少变化；如果 `cv_changes.txt` 里出现这些区域的变更，手动改对应 `data\*.ps1` 后双击 `site\build.cmd`，或找 AI 处理；
 - Word 中没有独立标题行的老项目，其展示用项目名固化在 `sync_from_word.ps1` 的 `$projReg` 注册表里；**新增项目**会自动取标题行或描述首句作项目名，并在 `sync_report.txt` 里提示复核；
 - 文本忠实度可用 `tools\audit_text.ps1` 抽查（网页文本块与 Word 原文逐段比对）；
 - Word 里新增的成果图片会自动导出压缩到 `site\images\`，文件映射记录在 `tools\image_map.txt`（勿手动改名）；
