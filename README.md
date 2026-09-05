@@ -47,9 +47,9 @@ site\                        # 本目录
 
 说明：
 
-- 基线 `cv_extracted.txt` / `cv_images_map.txt` 保存在 `E:\Research\LLM\Homepage\`，每次网站同步完成后由 AI 更新（`check_cv_update.ps1 -UpdateBaseline`）；
+- 基线 `cv_extracted.txt` / `cv_images_map.txt` 保存在 `E:\Research\LLM\Homepage\tools\`，每次网站同步完成后由 AI 更新（`check_cv_update.ps1 -UpdateBaseline`）；
 - Word 里**新增/替换图片**时，AI 会把图片导出、压缩后放进 `site\images\` 再引用；
-- 自己想先看一眼改了什么，也可以直接双击 `E:\Research\LLM\Homepage\检测Word变更.cmd`，结果在 `cv_changes.txt`。
+- 自己想先看一眼改了什么，也可以直接双击 `E:\Research\LLM\Homepage\tools\检测Word变更.cmd`，结果在 `tools\cv_changes.txt`。
 
 ## 数据文件怎么写
 
@@ -118,6 +118,6 @@ git push -u origin main
 ## 注意
 
 - `data\`、`build.ps1`、`build.cmd` 已通过 `.gitignore` 排除，**不会上传到 GitHub**——请自行备份这几个文件（例如另建一个私有仓库）；
-- 若编辑数据文件后构建出现中文乱码，运行 `E:\Research\LLM\Homepage\add_bom.ps1` 修复编码，再重新构建；
+- 若编辑数据文件后构建出现中文乱码，运行 `E:\Research\LLM\Homepage\tools\add_bom.ps1` 修复编码，再重新构建；
 - 邮箱按学术主页惯例做了防爬虫处理：`yangminglei122(at)163.com`；
 - 联系页按个人要求：出生信息仅显示到年份，不展示手机号（原始简历中有，如需恢复在 `contact.ps1` 加回对应行即可）。
