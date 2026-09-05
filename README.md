@@ -33,15 +33,23 @@ site\                        # 本目录
 
 1. **改内容**：用记事本或 VS Code 编辑 `data\` 下对应文件；
 2. **重新生成**：双击 `build.cmd`（窗口显示“全部页面生成完毕”即成功，按任意键关闭）；
-3. **发布**：
-
-```bash
-git add .
-git commit -m "更新内容"
-git push
-```
+3. **发布**：双击 `一键上传.cmd`（或在命令行 `git add . → git commit → git push`）。
 
 等待 1~2 分钟 GitHub Pages 生效。发布前建议本地双击 `index.html` 检查效果。
+
+## Word 简历更新：交给 AI 的流程（推荐）
+
+改了 Word 简历后**不需要手动改 data 文件**，按下面三步走：
+
+1. **替换 Word**：把新版简历存为 `E:\Research\LLM\Homepage\CV of Yang Minglei, v3.0.docx`（覆盖旧文件），然后对 AI 说一声「Word 更新了，看一下变更」；
+2. **AI 对比 + 更新网页**：AI 运行 `检测Word变更.cmd` 背后的脚本（提取 Word 全文和图片位置，与基线 `cv_extracted.txt` 对比，变更明细写入 `cv_changes.txt`），理解差异后更新 `data\*.ps1`、重新构建，并给出预览。**此时不会上传 GitHub**；
+3. **确认后上传**：您看过效果说「可以，上传」，AI 才执行 git 提交推送；或者您自己双击本目录的 `一键上传.cmd`。
+
+说明：
+
+- 基线 `cv_extracted.txt` / `cv_images_map.txt` 保存在 `E:\Research\LLM\Homepage\`，每次网站同步完成后由 AI 更新（`check_cv_update.ps1 -UpdateBaseline`）；
+- Word 里**新增/替换图片**时，AI 会把图片导出、压缩后放进 `site\images\` 再引用；
+- 自己想先看一眼改了什么，也可以直接双击 `E:\Research\LLM\Homepage\检测Word变更.cmd`，结果在 `cv_changes.txt`。
 
 ## 数据文件怎么写
 
