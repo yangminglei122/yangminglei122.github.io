@@ -53,7 +53,7 @@ table.foottable {
 }
 
 .sitename {
-	color: #03188D;
+	color: #660874;
 	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
 	font-size: 30px;
 	font-weight: bold;
@@ -61,7 +61,7 @@ table.foottable {
 }
 
 .sitename-en {
-	color: #03188D;
+	color: #660874;
 	font-family: "Times New Roman", "宋体", serif;
 	font-size: 20px;
 	font-weight: bold;
@@ -70,7 +70,7 @@ table.foottable {
 
 /* ---------- 左侧导航 ---------- */
 .menu {
-	color: #000099;
+	color: #660874;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
@@ -106,7 +106,7 @@ table.foottable {
 }
 
 .footlink:hover {
-	color: #8142bf;
+	color: #82318E;
 	font-family: "Times New Roman", "宋体";
 	font-size: 12px;
 	text-decoration: none;
@@ -122,7 +122,7 @@ table.foottable {
 
 /* ---------- 正文标题 ---------- */
 .titlebig {
-	color: #000099;
+	color: #660874;
 	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
 	font-size: 20px;
 	font-weight: bold;
@@ -131,7 +131,7 @@ table.foottable {
 }
 
 .titlesmall {
-	color: #006600;
+	color: #82318E;
 	font-family: "Microsoft YaHei", "黑体", "宋体", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: bold;
@@ -150,14 +150,14 @@ table.foottable {
 }
 
 .textlink {
-	color: #000099;
+	color: #660874;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
 }
 
 .textlink:hover {
-	color: #8142bf;
+	color: #82318E;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
@@ -179,14 +179,14 @@ table.foottable {
 }
 
 .articlelink {
-	color: #0077EE;
+	color: #660874;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
 }
 
 .articlelink:hover {
-	color: #8142bf;
+	color: #82318E;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
@@ -237,7 +237,7 @@ ol.pub li {
 }
 
 .itemhead .org {
-	color: #000099;
+	color: #660874;
 }
 
 .itemsub {
@@ -256,7 +256,7 @@ table.cvtable {
 
 table.cvtable th,
 table.cvtable td {
-	border: 1px solid #A7B1FC;
+	border: 1px solid #B48FC2;
 	padding: 6px 10px;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
@@ -267,7 +267,7 @@ table.cvtable td {
 }
 
 table.cvtable th {
-	background: #EEF0FF;
+	background: #F5EDF8;
 	font-weight: bold;
 	white-space: nowrap;
 }
@@ -294,7 +294,7 @@ table.cvtable th {
 }
 
 .videolink {
-	color: #0077EE;
+	color: #660874;
 	font-family: "Times New Roman", "宋体";
 	font-size: 14px;
 	text-decoration: none;
@@ -302,7 +302,7 @@ table.cvtable th {
 }
 
 .videolink:hover {
-	color: #8142bf;
+	color: #82318E;
 }
 
 /* ---------- 小屏适配（窄屏时收窄布局） ---------- */
