@@ -46,6 +46,8 @@ site\                        # 本目录
    - 论文（Journal / Conference paper / Conference abstract）、专利（自动按「授权/实质审查」分组）、软著 → `publications.ps1`
    - 科研课题 → `grants.ps1`；首页简介段落 + 荣誉奖励 → `index.ps1`
    - 成果展示（AI:/Robots: 分组、图片导出压缩、网盘链接）→ `achievements.ps1`
+   - 工作经历（时间/单位/职位/城市 表格行 + 要点段落）→ `experience.ps1`
+   - 项目经历（含项目展示名注册表、要点加粗规则、小节标题）→ `projects.ps1`
    - 自动加粗本人姓名、DOI 链接转换、已知排版毛刺修正（`sync_from_word.ps1` 里的 `$fixups` 表）
 3. 打开浏览器预览和同步报告（`tools\sync_report.txt`）。
 
@@ -53,7 +55,9 @@ site\                        # 本目录
 
 注意：
 
-- **不自动同步**的部分：教育背景、工作经历、项目经历、联系方式、头像、菜单——这些页面改动很少；如果 `cv_changes.txt` 里出现这些区域的变更，手动改对应 `data\*.ps1` 后双击 `site\build.cmd`，或找 AI 处理；
+- **不自动同步**的部分：教育背景、联系方式、头像、菜单——这些内容极少变化；如果 `cv_changes.txt` 里出现这些区域的变更，手动改对应 `data\*.ps1` 后双击 `site\build.cmd`，或找 AI 处理；
+- Word 中没有独立标题行的老项目，其展示用项目名固化在 `sync_from_word.ps1` 的 `$projReg` 注册表里；**新增项目**会自动取标题行或描述首句作项目名，并在 `sync_report.txt` 里提示复核；
+- 文本忠实度可用 `tools\audit_text.ps1` 抽查（网页文本块与 Word 原文逐段比对）；
 - Word 里新增的成果图片会自动导出压缩到 `site\images\`，文件映射记录在 `tools\image_map.txt`（勿手动改名）；
 - 若 Word 结构大改（章节标题改名/增删），一键更新会报错并保持网站原样，此时找 AI 处理；
 - 基线更新（全部同步并上传后执行，防止已处理变更重复报告）：`powershell -File tools\check_cv_update.ps1 -UpdateBaseline`。
