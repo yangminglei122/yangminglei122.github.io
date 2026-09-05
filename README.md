@@ -33,23 +33,30 @@ site\                        # 本目录
 
 1. **改内容**：用记事本或 VS Code 编辑 `data\` 下对应文件；
 2. **重新生成**：双击 `build.cmd`（窗口显示“全部页面生成完毕”即成功，按任意键关闭）；
-3. **发布**：双击 `一键上传.cmd`（或在命令行 `git add . → git commit → git push`）。
+3. **发布**：双击根目录的 `一键上传.cmd`（或在命令行 `git add . → git commit → git push`）。
 
 等待 1~2 分钟 GitHub Pages 生效。发布前建议本地双击 `index.html` 检查效果。
 
-## Word 简历更新：交给 AI 的流程（推荐）
+## Word 简历更新：一键更新（推荐，无需 AI）
 
-改了 Word 简历后**不需要手动改 data 文件**，按下面三步走：
+改了 Word 简历后，**双击根目录的 `一键更新.cmd` 即可**，它会自动完成：
 
-1. **替换 Word**：把新版简历存为 `E:\Research\LLM\Homepage\CV of Yang Minglei, v3.0.docx`（覆盖旧文件），然后对 AI 说一声「Word 更新了，看一下变更」；
-2. **AI 对比 + 更新网页**：AI 运行 `检测Word变更.cmd` 背后的脚本（提取 Word 全文和图片位置，与基线 `cv_extracted.txt` 对比，变更明细写入 `cv_changes.txt`），理解差异后更新 `data\*.ps1`、重新构建，并给出预览。**此时不会上传 GitHub**；
-3. **确认后上传**：您看过效果说「可以，上传」，AI 才执行 git 提交推送；或者您自己双击本目录的 `一键上传.cmd`。
+1. 提取 Word 全文和图片，与基线对比，变更明细写入 `tools\cv_changes.txt`；
+2. **自动同步**以下内容到数据文件并重建全部页面：
+   - 论文（Journal / Conference paper / Conference abstract）、专利（自动按「授权/实质审查」分组）、软著 → `publications.ps1`
+   - 科研课题 → `grants.ps1`；首页简介段落 + 荣誉奖励 → `index.ps1`
+   - 成果展示（AI:/Robots: 分组、图片导出压缩、网盘链接）→ `achievements.ps1`
+   - 自动加粗本人姓名、DOI 链接转换、已知排版毛刺修正（`sync_from_word.ps1` 里的 `$fixups` 表）
+3. 打开浏览器预览和同步报告（`tools\sync_report.txt`）。
 
-说明：
+看过预览没问题后，双击根目录的 `一键上传.cmd` 发布上线。**整个过程不需要 AI 参与。**
 
-- 基线 `cv_extracted.txt` / `cv_images_map.txt` 保存在 `E:\Research\LLM\Homepage\tools\`，每次网站同步完成后由 AI 更新（`check_cv_update.ps1 -UpdateBaseline`）；
-- Word 里**新增/替换图片**时，AI 会把图片导出、压缩后放进 `site\images\` 再引用；
-- 自己想先看一眼改了什么，也可以直接双击 `E:\Research\LLM\Homepage\tools\检测Word变更.cmd`，结果在 `tools\cv_changes.txt`。
+注意：
+
+- **不自动同步**的部分：教育背景、工作经历、项目经历、联系方式、头像、菜单——这些页面改动很少；如果 `cv_changes.txt` 里出现这些区域的变更，手动改对应 `data\*.ps1` 后双击 `site\build.cmd`，或找 AI 处理；
+- Word 里新增的成果图片会自动导出压缩到 `site\images\`，文件映射记录在 `tools\image_map.txt`（勿手动改名）；
+- 若 Word 结构大改（章节标题改名/增删），一键更新会报错并保持网站原样，此时找 AI 处理；
+- 基线更新（全部同步并上传后执行，防止已处理变更重复报告）：`powershell -File tools\check_cv_update.ps1 -UpdateBaseline`。
 
 ## 数据文件怎么写
 
